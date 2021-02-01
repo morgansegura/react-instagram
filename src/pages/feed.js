@@ -16,9 +16,7 @@ function FeedPage() {
                 {/** Feed Post */}
                 <div>
                     {Array.from({ length: 5 }, () => getDefaultPost()).map(
-                        (post) => (
-                            <FeedPost key={post.id} post={post} />
-                        )
+                        (post) => post && <FeedPost key={post.id} post={post} />
                     )}
                 </div>
                 {/** Sidebar */}

@@ -1,11 +1,12 @@
 import React from 'react'
-import { Link } from 'react-outer-dom'
+import { Link } from 'react-router-dom'
 import { useUserCardStyles } from '../../styles'
 import { Avatar, Typography } from '@material-ui/core'
 
 function UserCard({ user }) {
     const classes = useUserCardStyles()
-    const { username, profile_image } = user
+
+    const { username, profile_image } = user ? user : ''
 
     return (
         <div className={classes.wrappers}>
